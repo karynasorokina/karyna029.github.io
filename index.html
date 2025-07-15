@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Подключение стилей -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Karyna Sorokina</title>
+</head>
+<body>
+    <h1>Karyna Sorokina</h1>
+    <h1>Developer, Student & Mentor</h1>
+    <nav>
+        <a href="#Karyna Sorokina">Головна</a>
+        <a href="{{ url_for('static', filename='specialty.html')}}">Моя спеціалізація</a>
+        <a href="{{ url_for('static', filename='advice.html')}}">Поради</a>
+        <a href="{{ url_for('static', filename='contact.html')}}">Контакти</a>
+    </nav>
+    <p>
+        <img src="MyPortfolio/Sorokina-Karyna.jpg" style="display: block; margin: 0 auto; width="300" height="350">
+    </p>
+    <section class="facts">
+        <div class="card">
+            <img src="https://via.placeholder.com/100" alt="icon" class="card-icon">
+            <h3>Основні відомості</h3>
+            <p>Мені 16 років. Я з міста Харків, з червня 2024 живу в Чеській Республіці.</p>
+        </div>
+
+        <div class="card">
+            <img src="MyPortfolio/Vysvedceni.jpg" alt="icon" class="card-icon">
+            <h3>Моя освіта</h3>
+            <p>Навчаюсь в Україні в 11 класі дистанційно. В Чехії закінчила початкову школу і навчаюсь в середній школі на 1 курсі спеціальність "Інформаційні технології".</p>
+        </div>
+
+        <div class="card">
+            <img src="MyPortfolio/Absolventsky-projekt.jpg" alt="icon" class="card-icon">
+            <h3>Мої навички</h3>
+            <p>
+                Володію англійською та чеською на середньому рівні. Вмію працювати ретельно і відповідально.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="MyPortfolio/Guitar.jpg" alt="icon" class="card-icon">
+            <h3>Мої хобі</h3>
+            <p>Я також люблю музику: граю на музичних інструментах, займаюсь бітмейкінгом та фоторедакцією.</p>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2025 Сорокіна Карина. Всі права захищені.</p>
+    </footer>
+</body>
+</html>
