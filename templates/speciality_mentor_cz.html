@@ -1,0 +1,201 @@
+{% include "base_cz.html" %}
+<section class="mentor-hero">
+  <div class="hero-content">
+    <h1><span class="hero-highlight">Uč se snadno</span> a s radostí! <i class="fas fa-rocket"></i></h1>
+    <p class="hero-text">Jsem Karyna, tvůj osobní mentor, který ti pomůže překonat složitá témata, získat jistotu ve studiu a dosáhnout lepších výsledků bez stresu a nudných lekcí.</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-number" data-count="50">0</div>
+        <div class="stat-label">žáků</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="95">0</div>
+        <div class="stat-label">% úspěšnost</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="100">0</div>
+        <div class="stat-label">spokojených</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div class="image-container">
+      <img src="{{ url_for('static', filename='mentor.jpg') }}" alt="Karyna Sorokina" width="200" height="270" class="main-photo">
+    </div>
+  </div>
+</section>
+
+<section class="benefits">
+  <h2 style="text-align: center">Proč si vybrat právě mě?</h2>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="fas fa-graduation-cap"></i></div>
+      <h3>Jednoduché vysvětlení složitých témat</h3>
+      <p>Projdeme materiál krok za krokem, dokud nebude jasný</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="fas fa-fire"></i></div>
+      <h3>Motivace a podpora</h3>
+      <p>Pomáhám najít vnitřní motivaci a věřit ve své schopnosti</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="fas fa-user-tie"></i></div>
+      <h3>Individuální přístup</h3>
+      <p>Studijní program je přizpůsoben vašim potřebám a tempu</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="fas fa-lightbulb"></i></div>
+      <h3>Studijní tipy a triky</h3>
+      <p>Učím efektivním technikám zapamatování a analýzy</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="fas fa-tachometer-alt"></i></div>
+      <h3>Rychlý pokrok</h3>
+      <p>První výsledky již po několika lekcích</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="fas fa-heart"></i></div>
+      <h3>Přátelská atmosféra</h3>
+      <p>Hodiny probíhají v pohodovém a podporujícím prostředí</p>
+    </div>
+  </div>
+</section>
+
+<section class="subjects-section">
+  <h2 style="text-align: center">📚 Předměty, které vyučuji</h2>
+  <div class="subjects-container">
+    <div class="subject-card math-card">
+      <div class="subject-content">
+        <h3 style="color: white">Matematika</h3>
+        <ul>
+          <li>Školní program</li>
+          <li>Příprava na přijímací zkoušku do střední školy</li>
+          <li>Rozvoj logického myšlení</li>
+          <li>Účast na olympiádách a soutěžích</li>
+        </ul>
+        <div class="subject-icon"><i class="fas fa-square-root-alt"></i></div>
+      </div>
+    </div>
+    <div class="subject-card english-card">
+      <div class="subject-content">
+        <h3 style="color: white">Angličtina</h3>
+        <ul>
+          <li>Úroveň A0-B1</li>
+          <li>Rozšiřování slovní zásoby</li>
+          <li>Jistá komunikace a strukturované vyjadřování</li>
+          <li>Pravidelná praxe přes anglická média</li>
+          <li>Práce na poslechu a psaní</li>
+        </ul>
+        <div class="subject-icon"><i class="fas fa-language"></i></div>
+      </div>
+    </div>
+    <div class="subject-card czech-card">
+      <div class="subject-content">
+        <h3 style="color: white">Čeština</h3>
+        <ul>
+          <li>Úroveň A0-B1</li>
+          <li>Příprava na přijímací zkoušky</li>
+          <li>Konverzační praxe</li>
+          <li>Akademický jazyk, hlubší studium</li>
+        </ul>
+        <div class="subject-icon"><i class="fas fa-language"></i></div>
+      </div>
+    </div>
+    <div class="subject-card lang-card">
+      <div class="subject-content">
+        <h3 style="color: white">Ukrajinština</h3>
+        <ul>
+          <li>Gramatika</li>
+          <li>Psání slohových prací</li>
+          <li>Literatura</li>
+          <li>Příprava na státní zkoušky</li>
+        </ul>
+        <div class="subject-icon"><i class="fas fa-pen-fancy"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <h2 style="text-align: center">Recenze mých studentů</h2>
+  <div class="testimonials-slider">
+    <div class="testimonial-card">
+      <div class="testimonial-content">
+        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+        <p>Karyna velmi jasně vysvětluje složitá témata. Díky ní jsem konečně pochopil matematiku a udělal přijímačky na 190 bodů!</p>
+        <div class="student-info">
+          <div class="student-name">Andrij, 17 let</div>
+          <div class="student-rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-content">
+        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+        <p>Po každé hodině jsem nadšená! Od začátku vytvořila přátelskou atmosféru, seznámila nás s abecedou, výslovností a základními frázemi. Každá lekce byla unikátní a různorodá: hodně praxe, her, interaktivních cvičení, opakování pro lepší pochopení materiálu, poslouchali jsme příklady a tvořili dialogy.</p>
+        <div class="student-info">
+          <div class="student-name">Ivanna, 25 let</div>
+          <div class="student-rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="testimonials-slider">
+    <div class="testimonial-card">
+      <div class="testimonial-content">
+        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+        <p>Moc se mi líbí hodiny češtiny! Probíhají zajímavým a pohodlným způsobem — kombinujeme gramatiku, novou slovní zásobu, čtení a konverzační praxi, takže učení je různorodé a dynamické. Vždy se dozvím něco nového. Vysvětlení jsou velmi jasná a srozumitelná, všechno dobře strukturuješ a vždy jsi připravena odpovědět na otázky nebo něco zopakovat, pokud něco není úplně jasné. Atmosféra na hodinách je přátelská a motivační — chce se učit dál! Nejvíc se mi líbí, když trénujeme výslovnost a mluvení — to dodává jistotu při reálné komunikaci. Celkově jsem velmi spokojený, vidím pokrok a s každou hodinou se cítím jistější v češtině.</p>
+        <div class="student-info">
+          <div class="student-name">Vitalij, 13 let</div>
+          <div class="student-rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-container">
+    <h2 style="color: white">Jsi připraven(a) učit se novým způsobem?</h2>
+    <p>Vyplň formulář a já se s tebou spojím pro bezplatnou konzultaci</p>
+    <a href="{{ url_for('contact') }}" class="cta-button">
+      Přihlásit se na lekci <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+
+<script>
+  // Animace čísel
+  function animateValue(obj, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      obj.innerHTML = Math.floor(progress * (end - start) + start);
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    statNumbers.forEach(number => {
+      const target = parseInt(number.getAttribute('data-count'));
+      animateValue(number, 0, target, 2000);
+    });
+  });
+</script>
+
+<footer>
+  &copy; 2025 Karyna Sorokina. Všechna práva vyhrazena.
+  <br>
+  Instagram, Telegram, Github: karynasorokina
+</footer>

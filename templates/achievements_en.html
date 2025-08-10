@@ -1,0 +1,105 @@
+{% include "base_en.html" %}
+<section class="awards-education">
+    <h1>🏆 Awards and Education</h1>
+
+    <!-- Promo block -->
+    <div class="promo-block">
+        <img src="{{ url_for('static', filename='karyna-sorokina.jpg') }}" alt="Photo" class="promo-img">
+        <div>
+            <h2>Hello! I'm Karyna 👋</h2>
+            <p>I have excellent academic results, international certificates, and practical skills.
+               Ready for new challenges and growth in a modern environment.</p>
+            <button onclick="window.location.href='/contact'" class="cta-btn">Contact Me</button>
+        </div>
+    </div>
+
+    <!-- Education timeline -->
+    <div class="timeline">
+        <div class="timeline-item">June 2024 – Basic Secondary Education</div>
+        <div class="timeline-item">September 2024-2025 – Czech School + Czech Language Courses A2</div>
+        <div class="timeline-item">May 2025 – Admission to Secondary School</div>
+        <div class="timeline-item">June 2025 – Graduation Project</div>
+        <div class="timeline-item">August 2025 – Creation of Own Portfolio</div>
+    </div>
+
+    <!-- Documents -->
+    <div class="document-container" onclick="openModal('{{ url_for('static', filename='Свідоцтво про здобуття базової середньої освіти.pdf') }}')">
+        <h3>📄 Certificate of Basic Secondary Education</h3>
+        <p>Received after 9 years of study with high results</p>
+    </div>
+    <div class="document-container">
+        <h3>📘 Czech Language A2</h3>
+        <img src="{{ url_for('static', filename='czA2.png') }}" class="thumb" onclick="openModal(this.src)">
+        <p>International certificate confirming knowledge of the Czech language</p>
+    </div>
+
+    <div class="document-container" onclick="openModal('{{ url_for('static', filename='VYSVĚDČENÍ.pdf') }}')">
+        <h3>🎓 Graduation from Czech School</h3>
+        <p>Official certificate of completion of studies in the Czech Republic</p>
+    </div>
+
+    <div class="document-container" onclick="openModal('{{ url_for('static', filename='Absolventsky_projekt.pdf') }}')">
+        <h3>💻 Graduation Project Defense</h3>
+        <p>Successfully presented and defended graduation project</p>
+    </div>
+
+    <div class="document-container" onclick="openModal('{{ url_for('static', filename='příjetínaSŠ.jpg') }}')">
+        <h3>🏫 Admission to Secondary School</h3>
+        <p>Official confirmation of admission to the next level of education</p>
+    </div>
+
+    <div class="document-container">
+        <h3>🔑 Logika Certificates</h3>
+        <img src="{{ url_for('static', filename='Logika1.png') }}" class="thumb" onclick="openModal(this.src)">
+        <img src="{{ url_for('static', filename='Logika2.png') }}" class="thumb" onclick="openModal(this.src)">
+        <p>Certificates for completing Python programming language courses at Logika school</p>
+    </div>
+
+    <!-- Modal window -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <iframe id="modal-content" frameborder="0"></iframe>
+        <img id="modal-img" />
+    </div>
+</section>
+<footer>
+    &copy 2025 Karyna Sorokina. All rights reserved.
+      <br>
+    Instagram, Telegram, Github: karynasorokina
+</footer>
+<style>
+    .awards-education { max-width: 900px; margin: 0 auto; padding: 20px; }
+    h1 { text-align: center; margin-bottom: 30px; }
+
+    .promo-block {
+        display: flex; align-items: center; gap: 20px;
+        background: #f7f7f7; padding: 20px; border-radius: 12px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.1); margin-bottom: 40px;
+    }
+    .promo-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; }
+    .cta-btn { background: #ff5722; color: white; border: none; padding: 10px 20px;
+               border-radius: 8px; cursor: pointer; }
+    .cta-btn:hover { background: #e64a19; }
+
+    .timeline { display: flex; justify-content: space-between; margin-bottom: 40px; position: relative; }
+    .timeline::before { content: ''; position: absolute; top: 50%; left: 0; right: 0;
+                        height: 2px; background: #ccc; z-index: -1; }
+    .timeline-item { background: white; padding: 10px 15px; border: 1px solid #ddd;
+                     border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+
+    .document-container {
+        background: #fff; padding: 15px; margin-bottom: 20px;
+        border: 1px solid #ddd; border-radius: 10px; cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .document-container:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .thumb { width: 100px; margin-right: 10px; cursor: pointer; border-radius: 6px; }
+
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+             background: rgba(0,0,0,0.7); justify-content: center; align-items: center; }
+    .modal iframe, .modal img { max-width: 80%; max-height: 80%; background: white; border-radius: 8px; }
+    .modal .close { position: absolute; top: 20px; right: 30px; font-size: 30px; color: white; cursor: pointer; }
+</style>

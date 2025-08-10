@@ -1,0 +1,61 @@
+{% include "base_en.html" %}
+<main class="contact-page">
+  <h1 class="creative-title">📩 Feedback</h1>
+
+  <div class="contact-card">
+    {% if success %}
+      <div class="success-message">
+        ✅ Thank you for your comment! The message has been successfully sent to the site owner.
+      </div>
+    {% else %}
+      <form method="post" action="{{ url_for('contact') }}">
+  <h2>Do you have any questions or suggestions?</h2>
+  <h3>Write to me</h3>
+
+  <div class="input-group">
+    <select id="subject" name="subject" required>
+      <option value="" disabled selected>Select a subject</option>
+      <option value="general">General inquiry</option>
+      <option value="project">Order an IT project</option>
+      <option value="consultation">Consultation for a lesson</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <input type="text" id="name" name="name" required>
+    <label for="name">Your name</label>
+  </div>
+
+  <div class="input-group">
+    <input type="email" id="email" name="email" required>
+    <label for="email">Your Email</label>
+  </div>
+
+  <div class="input-group">
+    <input type="text" id="phone" name="phone">
+    <label for="phone">Phone number (optional)</label>
+  </div>
+
+  <div class="input-group">
+    <textarea id="message" name="message" rows="6" required></textarea>
+    <label for="message">Your comment</label>
+  </div>
+
+  <button type="submit" class="gradient-btn">Send</button>
+    {% endif %}
+      </form>
+  </div>
+
+  <div class="social-links">
+    <h3>🌐 Contact me:</h3>
+    <a href="https://t.me/karynasorokina" target="_blank" class="social-icon">Telegram</a>
+    <a href="https://www.instagram.com/karynasorokina" target="_blank" class="social-icon">Instagram</a>
+    <a href="https://github.com/karynasorokina" target="_blank" class="social-icon">GitHub</a>
+  </div>
+</main>
+
+<footer>
+    &copy 2025 Karyna Sorokina. All rights reserved.
+      <br>
+    Instagram, Telegram, Github: karynasorokina
+</footer>

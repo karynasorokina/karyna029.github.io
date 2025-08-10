@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="awards-education">
+    <h1>🏆 Нагороди та Освіта</h1>
+
+    <!-- Рекламний блок -->
+    <div class="promo-block">
+        <img src="{{ url_for('static', filename='karyna-sorokina.jpg') }}" alt="Фото" class="promo-img">
+        <div>
+            <h2>Вітаю! Я Карина 👋</h2>
+            <p>Маю відмінні результати в навчанні, міжнародні сертифікати та практичні навички.
+               Готовий до нових викликів і розвитку в сучасному середовищі.</p>
+            <button onclick="window.location.href='/contact'" class="cta-btn">Зв’язатися зі мною</button>
+        </div>
+    </div>
+
+    <!-- Таймлайн освіти -->
+    <div class="timeline">
+        <div class="timeline-item">Червень 2024 – Базова середня освіта</div>
+        <div class="timeline-item">Вересень 2024-2025 – Чеська школа + курси чеської мови A2</div>
+        <div class="timeline-item">Травень 2025 – Прийняття на середню школу</div>
+        <div class="timeline-item">Червень 2025 – Випускний проєкт</div>
+        <div class="timeline-item">Серпень 2025 – Створення власного портфоліо</div>
+    </div>
+
+    <!-- Документи -->
+    <div class="document-container" onclick="openModal('{{ url_for('static', filename='Свідоцтво про здобуття базової середньої освіти.pdf') }}')">
+        <h3>📄 Свідоцтво про здобуття базової середньої освіти</h3>
+        <p>Отримано після 9 років навчання з високими результатами</p>
+    </div>
+    <div class="document-container">
+        <h3>📘 Чеська мова A2</h3>
+        <img src="{{ url_for('static', filename='czA2.png') }}" class="thumb" onclick="openModal(this.src)">
+        <p>Міжнародний сертифікат, підтверджує знання чеської мови</p>
+    </div>
+
+    <div class="document-container" onclick="openModal('{{ url_for('static', filename='VYSVĚDČENÍ.pdf') }}')">
+        <h3>🎓 Випуск з чеської школи</h3>
+        <p>Офіційне свідоцтво про завершення навчання у Чехії</p>
+    </div>
+
+    <div class="document-container" onclick="openModal('{{ url_for('static', filename='Absolventsky_projekt.pdf') }}')">
+        <h3>💻 Захист випускного проєкту</h3>
+        <p>Успішно представлений та захищений випускний проєкт</p>
+    </div>
+
+    <div class="document-container" onclick="openModal('{{ url_for('static', filename='příjetínaSŠ.jpg') }}')">
+        <h3>🏫 Прийняття на середню школу</h3>
+        <p>Офіційне підтвердження вступу на наступний рівень освіти</p>
+    </div>
+
+    <div class="document-container">
+        <h3>🔑 Сертифікати Logika</h3>
+        <img src="{{ url_for('static', filename='Logika1.png') }}" class="thumb" onclick="openModal(this.src)">
+        <img src="{{ url_for('static', filename='Logika2.png') }}" class="thumb" onclick="openModal(this.src)">
+        <p>Сертифікати з завершення курсів мови програмування Python школи Logika</p>
+    </div>
+
+    <!-- Модальне вікно -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <iframe id="modal-content" frameborder="0"></iframe>
+        <img id="modal-img" />
+    </div>
+</section>
+<footer>
+    &copy 2025 Карина Сорокіна. Всі права захищені.
+      <br>
+    Instagram, Telegram, Github: karynasorokina
+  </footer>
+<style>
+    .awards-education { max-width: 900px; margin: 0 auto; padding: 20px; }
+    h1 { text-align: center; margin-bottom: 30px; }
+
+    .promo-block {
+        display: flex; align-items: center; gap: 20px;
+        background: #f7f7f7; padding: 20px; border-radius: 12px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.1); margin-bottom: 40px;
+    }
+    .promo-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; }
+    .cta-btn { background: #ff5722; color: white; border: none; padding: 10px 20px;
+               border-radius: 8px; cursor: pointer; }
+    .cta-btn:hover { background: #e64a19; }
+
+    .timeline { display: flex; justify-content: space-between; margin-bottom: 40px; position: relative; }
+    .timeline::before { content: ''; position: absolute; top: 50%; left: 0; right: 0;
+                        height: 2px; background: #ccc; z-index: -1; }
+    .timeline-item { background: white; padding: 10px 15px; border: 1px solid #ddd;
+                     border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+
+    .document-container {
+        background: #fff; padding: 15px; margin-bottom: 20px;
+        border: 1px solid #ddd; border-radius: 10px; cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .document-container:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .thumb { width: 100px; margin-right: 10px; cursor: pointer; border-radius: 6px; }
+
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+             background: rgba(0,0,0,0.7); justify-content: center; align-items: center; }
+    .modal iframe, .modal img { max-width: 80%; max-height: 80%; background: white; border-radius: 8px; }
+    .modal .close { position: absolute; top: 20px; right: 30px; font-size: 30px; color: white; cursor: pointer; }
+</style>
+
+<script>
+    function openModal(src) {
+        const modal = document.getElementById('modal');
+        const iframe = document.getElementById('modal-content');
+        const img = document.getElementById('modal-img');
+
+        if (src.endsWith('.pdf')) {
+            iframe.style.display = 'block';
+            img.style.display = 'none';
+            iframe.src = src;
+        } else {
+            iframe.style.display = 'none';
+            img.style.display = 'block';
+            img.src = src;
+        }
+        modal.style.display = 'flex';
+    }
+
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+</script>
+{% endblock %}

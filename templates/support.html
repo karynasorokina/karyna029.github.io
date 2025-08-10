@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block content %}
+<main class="donate-page">
+  <section class="donate-header">
+    <h1>❤️ Підтримайте розвиток проєкту</h1>
+    <p>Ваша підтримка допомагає мені створювати новий корисний контент, , покращувати сайт та робити більше для спільноти IT.</p>
+  </section>
+
+  <section class="donate-progress">
+    <div class="progress-text">Зібрано <span id="current-amount">2</span>$ з <span id="goal-amount">100</span>$</div>
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 0;"></div>
+    </div>
+  </section>
+
+  <section class="donate-options">
+    <div class="donate-card">
+      <span class="icon">☕</span>
+      <h3>Підтримати на каву</h3>
+      <p>Невелика, але важлива допомога</p>
+      <button onclick="donate(5)">5$</button>
+    </div>
+  <div class="donate-card">
+    <span class="icon">💖</span>
+    <h3>Мій герой</h3>
+    <p>Ви робите розвиток швидшим</p>
+    <button onclick="donate(10)">10$</button>
+  </div>
+  <div class="donate-card">
+    <span class="icon">🚀</span>
+    <h3>Супер-спонсор</h3>
+    <p>Допомагаєте великими кроками рухатись вперед</p>
+    <button onclick="donate(25)">25$</button>
+  </div>
+  </section>
+
+  <section class="custom-amount">
+    <h3>💌 Інша сума</h3>
+    <input type="number" id="custom-donate" placeholder="Введіть суму $" />
+    <button id="custom-button">Підтримати</button>
+  </section>
+
+  <section class="payment-methods">
+    <h3>Способи підтримки</h3>
+    <div class="methods">
+      <a href="https://send.monobank.ua/jar/2g4tYv4pL8" target="_blank">💳 Monobank</a>
+      <a href="#">Buy Me a Coffee</a>
+    </div>
+  </section>
+  <section class="non-financial-support">
+    <h3>🤝 Інші способи допомоги</h3>
+    <ul>
+      <li>🔄 <strong>Зробіть репост</strong> мого сайту чи статей у соціальних мережах</li>
+      <li>📝 <strong>Напишіть відгук</strong> або порадьте мене друзям</li>
+      <li>📢 <strong>Розмістіть рекламу</strong> моїх послуг або проєктів</li>
+      <li>💬 <strong>Залиште коментар</strong> або ідеї для нових матеріалів</li>
+    </ul>
+  </section>
+  <section class="transparency">
+    <p><b >💡 Кожен донат йде на оплату хостингу, розробку нового функціоналу та створення навчальних матеріалів.</b></p>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Карина Сорокіна. Всі права захищені.
+  <br>
+  Instagram, Telegram, Github: karynasorokina
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentAmountEl = document.getElementById("current-amount");
+    const goalAmountEl = document.getElementById("goal-amount");
+    const progressFill = document.querySelector(".progress-fill");
+    let currentAmount = parseInt(currentAmountEl.textContent);
+    const goalAmount = parseInt(goalAmountEl.textContent);
+
+    function updateProgress() {
+      let percentage = Math.min((currentAmount / goalAmount) * 100, 100);
+      progressFill.style.width = percentage + "%";
+    }
+
+    document.querySelectorAll(".donate-card button").forEach(btn => {
+      btn.addEventListener("click", () => {
+        currentAmount += parseInt(btn.dataset.amount);
+        currentAmountEl.textContent = currentAmount;
+        updateProgress();
+      });
+    });
+
+    document.getElementById("custom-button").addEventListener("click", () => {
+      let custom = parseInt(document.getElementById("custom-donate").value);
+      if (!isNaN(custom) && custom > 0) {
+        currentAmount += custom;
+        currentAmountEl.textContent = currentAmount;
+        updateProgress();
+      }
+    });
+
+    // Initial animation
+    setTimeout(updateProgress, 300);
+  });
+</script> 
+{% endblock %}

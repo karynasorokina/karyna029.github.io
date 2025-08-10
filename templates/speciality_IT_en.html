@@ -1,0 +1,130 @@
+{% include "base_en.html" %}
+<script>
+    function openModal() {
+        document.getElementById("projectModal").style.display = "flex";
+    }
+    function closeModal() {
+        document.getElementById("projectModal").style.display = "none";
+    }
+    // Close when clicking outside the modal window
+    window.onclick = function(e) {
+        const modal = document.getElementById("projectModal");
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+<section class="it-section">
+  <h2 class="section-title"><span class="icon">💻</span> Technologies I Work With</h2>
+  <div class="tech-grid">
+    <div class="tech-card">
+      <div class="tech-icon">🐍</div>
+      <span class="tech-name">Python</span>
+      <div class="tech-progress">
+        <div class="progress-bar" style="width: 90%"></div>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <div class="tech-icon">🟨</div>
+      <span class="tech-name">JavaScript</span>
+      <div class="tech-progress">
+        <div class="progress-bar" style="width: 75%"></div>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <div class="tech-icon">🖥️</div>
+      <span class="tech-name">HTML & CSS</span>
+      <div class="tech-progress">
+        <div class="progress-bar" style="width: 85%"></div>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <div class="tech-icon">🍵</div>
+      <span class="tech-name">Flask</span>
+      <div class="tech-progress">
+        <div class="progress-bar" style="width: 80%"></div>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <div class="tech-icon">⚡</div>
+      <span class="tech-name">Django</span>
+      <div class="tech-progress">
+        <div class="progress-bar" style="width: 70%"></div>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <div class="tech-icon">🔀</div>
+      <span class="tech-name">Git & GitHub</span>
+      <div class="tech-progress">
+        <div class="progress-bar" style="width: 85%"></div>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <div class="tech-icon">🗃️</div>
+      <span class="tech-name">SQL</span>
+      <div class="tech-progress">
+        <div class="progress-bar" style="width: 75%"></div>
+      </div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">🧡</div>
+      <span class="tech-name">Java</span>
+      <div class="tech-progress">
+        <div class="progress-bar" style="width: 75%"></div>
+      </div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">🤖</div>
+      <span class="tech-name">Telegram Bots</span>
+      <div class="tech-progress">
+        <div class="progress-bar" style="width: 85%"></div>
+      </div>
+    </div>
+  </div>
+
+  <h2>📜 My Certificates</h2>
+  <div class="document-container">
+        <h3>🔑 Logika Certificates</h3>
+        <img src="{{ url_for('static', filename='Logika1.png') }}" class="thumb" onclick="openModal(this.src)">
+        <img src="{{ url_for('static', filename='Logika2.png') }}" class="thumb" onclick="openModal(this.src)">
+        <p>Certificates for completing Python programming language courses at Logika school</p>
+  </div>
+
+  <h2>🚀 My Projects</h2>
+  <div class="projects-list">
+    <article class="project">
+      <h3>Telegram Bot for Music Downloading</h3>
+      <p>A Python bot that helps quickly download and convert audio from YouTube into the desired format.</p>
+      <a href="https://t.me/MusicCrossplatformBot" target="_blank" rel="noopener noreferrer">Try it on Telegram</a>
+    </article>
+    <article class="project">
+      <h3>Photo Editor</h3>
+      <p>Analytics and hypothesis testing based on data related to the Data Analytics profession.</p>
+      <a href="https://github.com/karynasorokina/DataAnalyticsJob" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+    </article>
+    <article class="project">
+      <h3>Data Analytics</h3>
+      <p>Analytics and hypothesis testing based on data related to the Data Analytics profession.</p>
+      <a href="https://github.com/karynasorokina/DataAnalyticsJob" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+    </article>
+    <article class="project">
+      <h3>Portfolio Website</h3>
+      <p>Responsive website for showcasing my skills and projects.</p>
+      <a href="https://your_demo_website" target="_blank" rel="noopener noreferrer">Visit Site</a>
+    </article>
+  </div>
+</section>
+<footer>
+    &copy; 2025 Karyna Sorokina. All rights reserved.
+      <br>
+    Instagram, Telegram, Github: karynasorokina
+</footer>
+</body>
+</html>

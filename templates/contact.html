@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+<main class="contact-page">
+  <h1 class="creative-title">📩 Зворотній зв'язок</h1>
+
+  <div class="contact-card">
+    {% if success %}
+      <div class="success-message">
+        ✅ Дякую вам за ваш коментар! Повідомлення успішно відправлено власнику сайту.
+      </div>
+    {% else %}
+      <form method="post" action="{{ url_for('contact') }}">
+  <h2>Чи є у вас запитання або пропозиції?</h2>
+  <h3>Напишіть мені</h3>
+
+  <div class="input-group">
+    <select id="subject" name="subject" required>
+      <option value="" disabled selected>Оберіть тему звернення</option>
+      <option value="general">Загальне питання</option>
+      <option value="project">Замовлення ІТ-проєкту</option>
+      <option value="consultation">Консультація на урок</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <input type="text" id="name" name="name" required>
+    <label for="name">Ваше ім'я</label>
+  </div>
+
+  <div class="input-group">
+    <input type="email" id="email" name="email" required>
+    <label for="email">Ваш Email</label>
+  </div>
+
+  <div class="input-group">
+    <input type="text" id="phone" name="phone">
+    <label for="phone">Номер телефону (необов'язково)</label>
+  </div>
+
+  <div class="input-group">
+    <textarea id="message" name="message" rows="6" required></textarea>
+    <label for="message">Ваш коментар</label>
+  </div>
+
+  <button type="submit" class="gradient-btn">Відправити</button>
+    {% endif %}
+      </form>
+  </div>
+
+  <div class="social-links">
+    <h3>🌐 Зв’яжіться зі мною:</h3>
+    <a href="https://t.me/karynasorokina" target="_blank" class="social-icon">Telegram</a>
+    <a href="https://www.instagram.com/karynasorokina" target="_blank" class="social-icon">Instagram</a>
+    <a href="https://github.com/karynasorokina" target="_blank" class="social-icon">GitHub</a>
+  </div>
+</main>
+
+<footer>
+    &copy 2025 Карина Сорокіна. Всі права захищені.
+      <br>
+    Instagram, Telegram, Github: karynasorokina
+</footer>
+
+
+{% endblock %}

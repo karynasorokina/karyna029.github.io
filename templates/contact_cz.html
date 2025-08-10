@@ -1,0 +1,61 @@
+{% include "base_cz.html" %}
+<main class="contact-page">
+  <h1 class="creative-title">📩 Zpětná vazba</h1>
+
+  <div class="contact-card">
+    {% if success %}
+      <div class="success-message">
+        ✅ Děkujeme za váš komentář! Zpráva byla úspěšně odeslána vlastníkovi webu.
+      </div>
+    {% else %}
+      <form method="post" action="{{ url_for('contact') }}">
+  <h2>Máte nějaké dotazy nebo návrhy?</h2>
+  <h3>Napište mi</h3>
+
+  <div class="input-group">
+    <select id="subject" name="subject" required>
+      <option value="" disabled selected>Vyberte téma</option>
+      <option value="general">Obecná otázka</option>
+      <option value="project">Objednávka IT projektu</option>
+      <option value="consultation">Konzultace k lekci</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <input type="text" id="name" name="name" required>
+    <label for="name">Vaše jméno</label>
+  </div>
+
+  <div class="input-group">
+    <input type="email" id="email" name="email" required>
+    <label for="email">Váš Email</label>
+  </div>
+
+  <div class="input-group">
+    <input type="text" id="phone" name="phone">
+    <label for="phone">Telefonní číslo (volitelné)</label>
+  </div>
+
+  <div class="input-group">
+    <textarea id="message" name="message" rows="6" required></textarea>
+    <label for="message">Váš komentář</label>
+  </div>
+
+  <button type="submit" class="gradient-btn">Odeslat</button>
+    {% endif %}
+      </form>
+  </div>
+
+  <div class="social-links">
+    <h3>🌐 Kontaktujte mě:</h3>
+    <a href="https://t.me/karynasorokina" target="_blank" class="social-icon">Telegram</a>
+    <a href="https://www.instagram.com/karynasorokina" target="_blank" class="social-icon">Instagram</a>
+    <a href="https://github.com/karynasorokina" target="_blank" class="social-icon">GitHub</a>
+  </div>
+</main>
+
+<footer>
+    &copy 2025 Karyna Sorokina. Všechna práva vyhrazena.
+      <br>
+    Instagram, Telegram, Github: karynasorokina
+</footer>

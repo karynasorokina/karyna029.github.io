@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karyna Sorokina</title>
+
+    <!-- Písma -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Ikona -->
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+
+    <!-- Styly -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1 style="color: white"><span class="icon">👩‍💻</span>Karyna Sorokina</h1>
+    <h2 class="creative-subtitle">Vývojářka / Studentka / Mentorka</h2>
+</header>
+
+<nav>
+  <ul class="menu">
+    <li><a href="{{ url_for('index_cz') }}">Domů</a></li>
+    <li class="dropdown">
+      <a href="#" onclick="return false;">Specializace</a>
+      <ul class="dropdown-content">
+        <li><a href="{{ url_for('achievements_cz') }}">Vzdělání a úspěchy</a></li>
+        <li><a href="{{ url_for('speciality_IT_cz') }}">IT</a></li>
+        <li><a href="{{ url_for('speciality_mentor_cz') }}">Mentorství</a></li>
+      </ul>
+    </li>
+    <li><a href="{{ url_for('advice_cz') }}">Rady</a></li>
+    <li><a href="{{ url_for('support_cz') }}">Podpora</a></li>
+    <li><a href="{{ url_for('contact_cz') }}">Kontakty</a></li>
+    <li class="dropdown">
+        <a href="#" onclick="return false;">Jazyk 🇨🇿</a>
+        <ul class="dropdown-content">
+            <li><a href="{{ url_for('index') }}">Українська 🇺🇦</a></li>
+            <li><a href="{{ url_for('index_en') }}">English 🇬🇧</a></li>
+            <li><a href="{{ url_for('index_cz') }}">Čeština 🇨🇿</a></li>
+        </ul>
+    </li>
+  </ul>
+</nav>
+{% block content %}{% endblock %}
+<script>
+  const elements = document.querySelectorAll('.scroll-animate');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+{% include "base_cz.html" %}
+<main>
+    <div class="photo-container">
+        <img src="{{ url_for('static', filename='Sorokina-Karyna.jpg') }}"
+             alt="Fotografie Karyny"
+             width="300" height="370"
+             class="main-photo" />
+    </div>
+
+    <section class="facts">
+        <div class="card">
+            <img src="{{ url_for('static', filename='my-life.jpg') }}" alt="ikona" class="card-icon" />
+            <h3>O mně</h3>
+            <p>Ve věku 16 let kombinuji studium, programování a mentorství. Žiji v České republice a pomáhám studentům z Ukrajiny a Evropy sebevědomě vstoupit do světa technologií.</p>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='Vysvedceni.jpg') }}" alt="ikona" class="card-icon" />
+            <h3>Vzdělání</h3>
+            <p>3 roky profesionálního programování (Logika), studuji obor Informační technologie. Vítězství na hackathonech, certifikáty a obhajoby projektů.</p>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='Guitar.jpg') }}" alt="ikona" class="card-icon" />
+            <h3>Koníčky</h3>
+            <p>Tvořím hudbu a beaty, hraji na hudební nástroje. Zabývám se úpravou fotografií a videí a vytvářím moderní obsah.</p>
+        </div>
+    </section>
+
+    <section class="skills-section">
+        <h2>Moje dovednosti</h2>
+        <div class="facts">
+            <div class="card">
+                <h3>Začátečník</h3>
+                <ul class="card-list">
+                    <li>Java Developer</li>
+                    <li>Logika vysoce zatížených aplikací</li>
+                    <li>Datová analytika</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Středně pokročilý</h3>
+                <ul class="card-list">
+                    <li>Základy kybernetické bezpečnosti</li>
+                    <li>Databáze (SQLite)</li>
+                    <li>Angličtina a čeština</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Pokročilý</h3>
+                <ul class="card-list">
+                    <li>Python: Back-end & Front-end</li>
+                    <li>Praktické projekty</li>
+                    <li>Pečlivost a zodpovědnost</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="achievements">
+        <h2>Moje úspěchy</h2>
+        <div class="slider-wrapper">
+            <div class="slider" id="achievementSlider">
+                <div class="card">🏆 Certifikát Logika 1–3</div>
+                <div class="card">🏅 Účast na olympiádách</div>
+                <div class="card">🏅 Obhajoba projektů a výzkumných prací</div>
+                <div class="card">🎓 Vítězství na hackathonu</div>
+                <div class="card">👩‍🎓 Přijetí na státní střední školu v ČR</div>
+                <div class="card">📈 20+ studentů s výsledky</div>
+                <div class="card">💼 Reálné projekty na GitHubu</div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    &copy; 2025 Karyna Sorokina. Všechna práva vyhrazena.
+    <br>
+    Instagram, Telegram, GitHub: karynasorokina
+</footer>
+</body>
+</html>
