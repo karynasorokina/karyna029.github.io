@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 # Загружаем переменные окружения
 load_dotenv(".gitignore/admin.env")
 
-cursor = <connection-name>.cursor(buffered=True)
+
 app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET_KEY", os.urandom(24))
 
@@ -137,6 +137,4 @@ if __name__ == "__main__":
     # Запускаємо веб-сервер:
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=False)
-
-
 

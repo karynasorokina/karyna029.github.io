@@ -1,81 +1,84 @@
-{% include "base.html" %}
-<main>
-    <div class="photo-container">
-        <img src="{{ url_for('static', filename='Sorokina-Karyna.jpg') }}"
-             alt="Фото Карини"
-             width="300" height="370"
-             class="main-photo" />
-    </div>
+{% extends "base.html" %}
 
-    <section class="facts">
-        <div class="card">
-            <img src="{{ url_for('static', filename='my-life.jpg') }}" alt="icon" class="card-icon" />
-            <h3>Про мене</h3>
-            <p>У 16 років я вже поєдную навчання, програмування та менторство. Живу в Чехії, допомагаю учням з України та Європи впевнено крокувати у світ технологій.</p>
+{% block content %}
+    <main>
+        <div class="photo-container">
+            <img src="{{ url_for('static', filename='Sorokina-Karyna.jpg') }}"
+                 alt="Фото Карини"
+                 width="300" height="370"
+                 class="main-photo" />
         </div>
 
-        <div class="card">
-            <img src="{{ url_for('static', filename='Vysvedceni.jpg') }}" alt="icon" class="card-icon" />
-            <h3>Освіта</h3>
-            <p>3 роки професійного програмування (Logika), навчаюсь на спеціальності «Інформаційні технології». Перемоги у хакатонах, сертифікати та захисти проєктів.</p>
-        </div>
-
-        <div class="card">
-            <img src="{{ url_for('static', filename='Guitar.jpg') }}" alt="icon" class="card-icon" />
-            <h3>Хобі</h3>
-            <p>Створюю музику та біти, володію музичними інструментами. Займаюсь фото- та відеоредакцією, створюю сучасний контент.</p>
-        </div>
-    </section>
-
-    <section class="skills-section">
-        <h2>Мої навички</h2>
-        <div class="facts">
+        <section class="facts">
             <div class="card">
-                <h3>Beginner</h3>
-                <ul class="card-list">
-                    <li>Java Developer</li>
-                    <li>Логіка високонавантажених програм</li>
-                    <li>Дата-аналітика</li>
-                </ul>
+                <img src="{{ url_for('static', filename='my-life.jpg') }}" alt="icon" class="card-icon" />
+                <h3>Про мене</h3>
+                <p>У 16 років я вже поєдную навчання, програмування та менторство. Живу в Чехії, допомагаю учням з України та Європи впевнено крокувати у світ технологій.</p>
             </div>
-            <div class="card">
-                <h3>Intermediate</h3>
-                <ul class="card-list">
-                    <li>Основи кібербезпеки</li>
-                    <li>Бази даних (SQLite)</li>
-                    <li>Англійська та чеська мови</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Advanced</h3>
-                <ul class="card-list">
-                    <li>Python: Back-end & Front-end</li>
-                    <li>Практичні проєкти</li>
-                    <li>Уважність та відповідальність</li>
-                </ul>
-            </div>
-        </div>
-    </section>
 
-    <section class="achievements">
-        <h2>Мої досягнення</h2>
-        <div class="slider-wrapper">
-            <div class="slider" id="achievementSlider">
-                <div class="card">🏆 Сертифікат Logika 1–3</div>
-                <div class="card">🏅 Участь в олімпіадах</div>
-                <div class="card">🏅 Захист проєктів та наукових робіт</div>
-                <div class="card">🎓 Перемога у хакатоні</div>
-                <div class="card">👩‍🎓 Вступ до державної середньої школи в Чехії</div>
-                <div class="card">📈 20+ учнів із результатами</div>
-                <div class="card">💼 Реальні проєкти на GitHub</div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='Vysvedceni.jpg') }}" alt="icon" class="card-icon" />
+                <h3>Освіта</h3>
+                <p>3 роки професійного програмування (Logika), навчаюсь на спеціальності «Інформаційні технології». Перемоги у хакатонах, сертифікати та захисти проєктів.</p>
             </div>
-        </div>
-    </section>
-</main>
-<footer>
-    &copy; 2025 Карина Сорокіна. Всі права захищені.
-    <br>
-    Instagram, Telegram, GitHub: karynasorokina
-</footer>
-</body>
-</html>
+
+            <div class="card">
+                <img src="{{ url_for('static', filename='Guitar.jpg') }}" alt="icon" class="card-icon" />
+                <h3>Хобі</h3>
+                <p>Створюю музику та біти, володію музичними інструментами. Займаюсь фото- та відеоредакцією, створюю сучасний контент.</p>
+            </div>
+        </section>
+
+        <section class="skills-section">
+            <h2>Мої навички</h2>
+            <div class="facts">
+                <div class="card">
+                    <h3>Beginner</h3>
+                    <ul class="card-list">
+                        <li>Java Developer</li>
+                        <li>Логіка високонавантажених програм</li>
+                        <li>Дата-аналітика</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Intermediate</h3>
+                    <ul class="card-list">
+                        <li>Основи кібербезпеки</li>
+                        <li>Бази даних (SQLite)</li>
+                        <li>Англійська та чеська мови</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Advanced</h3>
+                    <ul class="card-list">
+                        <li>Python: Back-end & Front-end</li>
+                        <li>Практичні проєкти</li>
+                        <li>Уважність та відповідальність</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="achievements">
+            <h2>Мої досягнення</h2>
+            <div class="slider-wrapper">
+                <div class="slider" id="achievementSlider">
+                    <div class="card">🏆 Сертифікат Logika 1–3</div>
+                    <div class="card">🏅 Участь в олімпіадах</div>
+                    <div class="card">🏅 Захист проєктів та наукових робіт</div>
+                    <div class="card">🎓 Перемога у хакатоні</div>
+                    <div class="card">👩‍🎓 Вступ до державної середньої школи в Чехії</div>
+                    <div class="card">📈 20+ учнів із результатами</div>
+                    <div class="card">💼 Реальні проєкти на GitHub</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Карина Сорокіна. Всі права захищені.
+        <br>
+        Instagram, Telegram, GitHub: karynasorokina
+    </footer>
+    </body>
+    </html>
+{% endblock %}
