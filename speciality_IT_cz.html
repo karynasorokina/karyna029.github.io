@@ -1,0 +1,126 @@
+{% include "base_cz.html" %}
+<script>
+    function openModal() {
+        document.getElementById("projectModal").style.display = "flex";
+    }
+    function closeModal() {
+        document.getElementById("projectModal").style.display = "none";
+    }
+    // Zavřít kliknutím mimo okno
+    window.onclick = function(e) {
+        const modal = document.getElementById("projectModal");
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+<section class="it-section">
+  <h2 class="section-title"><span class="icon">💻</span> Technologie, se kterými pracuji</h2>
+  <div class="tech-grid">
+    <div class="tech-card">
+      <div class="tech-icon">🐍</div>
+      <span class="tech-name">Python</span>
+      <div class="tech-progress">
+        <div class="progress-bar" style="width: 90%"></div>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <div class="tech-icon">🟨</div>
+      <span class="tech-name">JavaScript</span>
+      <div class="tech-progress">
+        <div class="progress-bar" style="width: 75%"></div>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <div class="tech-icon">🖥️</div>
+      <span class="tech-name">HTML & CSS</span>
+      <div class="tech-progress">
+        <div class="progress-bar" style="width: 85%"></div>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <div class="tech-icon">🍵</div>
+      <span class="tech-name">Flask</span>
+      <div class="tech-progress">
+        <div class="progress-bar" style="width: 80%"></div>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <div class="tech-icon">⚡</div>
+      <span class="tech-name">Django</span>
+      <div class="tech-progress">
+        <div class="progress-bar" style="width: 70%"></div>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <div class="tech-icon">🔀</div>
+      <span class="tech-name">Git & GitHub</span>
+      <div class="tech-progress">
+        <div class="progress-bar" style="width: 85%"></div>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <div class="tech-icon">🗃️</div>
+      <span class="tech-name">SQL</span>
+      <div class="tech-progress">
+        <div class="progress-bar" style="width: 75%"></div>
+      </div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">🧡</div>
+      <span class="tech-name">Java</span>
+      <div class="tech-progress">
+        <div class="progress-bar" style="width: 75%"></div>
+      </div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">🤖</div>
+      <span class="tech-name">Telegram Boti</span>
+      <div class="tech-progress">
+        <div class="progress-bar" style="width: 85%"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<h2>📜 Moje certifikáty</h2>
+<div class="document-container">
+        <h3>🔑 Certifikáty Logika</h3>
+        <img src="{{ url_for('static', filename='Logika1.png') }}" class="thumb" onclick="openModal(this.src)">
+        <img src="{{ url_for('static', filename='Logika2.png') }}" class="thumb" onclick="openModal(this.src)">
+        <p>Certifikáty za absolvování kurzů programovacího jazyka Python ve škole Logika</p>
+</div>
+
+<h2>🚀 Moje projekty</h2>
+<div class="projects-list">
+  <article class="project">
+    <h3>Telegram bot pro stahování hudby</h3>
+    <p>Python bot, který pomáhá rychle stahovat a konvertovat audio z YouTube do požadovaného formátu.</p>
+    <a href="https://t.me/MusicCrossplatformBot" target="_blank" rel="noopener noreferrer">Vyzkoušet v Telegramu</a>
+  </article>
+  <article class="project">
+    <h3>Foto editor</h3>
+    <p>Analýza a vyhodnocování hypotéz z dat v oboru Data Analytics.</p>
+    <a href="https://github.com/karynasorokina/DataAnalyticsJob" target="_blank" rel="noopener noreferrer">Zobrazit na GitHubu</a>
+  </article>
+  <article class="project">
+    <h3>Data Analytics</h3>
+    <p>Analýza a vyhodnocování hypotéz z dat v oboru Data Analytics.</p>
+    <a href="https://github.com/karynasorokina/DataAnalyticsJob" target="_blank" rel="noopener noreferrer">Zobrazit na GitHubu</a>
+  </article>
+  <article class="project">
+    <h3>Portfolio web</h3>
+    <p>Responzivní web pro prezentaci mých dovedností a projektů.</p>
+    <a href="https://tvuj_web_demo" target="_blank" rel="noopener noreferrer">Přejít na web</a>
+  </article>
+</div>
+</section>
+</body>
+</html>

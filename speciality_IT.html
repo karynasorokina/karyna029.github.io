@@ -1,0 +1,156 @@
+{% include "base.html" %}
+<script>
+    function openModal() {
+        document.getElementById("projectModal").style.display = "flex";
+    }
+    function closeModal() {
+        document.getElementById("projectModal").style.display = "none";
+    }
+    // Закриття по кліку поза вікном
+    window.onclick = function (e) {
+        const modal = document.getElementById("projectModal");
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+<section class="it-section">
+    <h2 class="section-title"><span class="icon">⚡</span> Мій Tech Stack</h2>
+    <div class="tech-grid">
+        <div class="tech-card">
+            <div class="tech-icon">🐍</div>
+            <span class="tech-name">Python</span>
+            <div class="tech-progress"><div class="progress-bar" style="width: 90%"></div></div>
+        </div>
+        <div class="tech-card">
+            <div class="tech-icon">🟨</div>
+            <span class="tech-name">JavaScript</span>
+            <div class="tech-progress"><div class="progress-bar" style="width: 75%"></div></div>
+        </div>
+        <div class="tech-card">
+            <div class="tech-icon">🖥️</div>
+            <span class="tech-name">HTML & CSS</span>
+            <div class="tech-progress"><div class="progress-bar" style="width: 85%"></div></div>
+        </div>
+        <div class="tech-card">
+            <div class="tech-icon">🍵</div>
+            <span class="tech-name">Flask</span>
+            <div class="tech-progress"><div class="progress-bar" style="width: 80%"></div></div>
+        </div>
+        <div class="tech-card">
+            <div class="tech-icon">⚡</div>
+            <span class="tech-name">Django</span>
+            <div class="tech-progress"><div class="progress-bar" style="width: 70%"></div></div>
+        </div>
+        <div class="tech-card">
+            <div class="tech-icon">🔀</div>
+            <span class="tech-name">Git & GitHub</span>
+            <div class="tech-progress"><div class="progress-bar" style="width: 85%"></div></div>
+        </div>
+        <div class="tech-card">
+            <div class="tech-icon">🗃️</div>
+            <span class="tech-name">SQL</span>
+            <div class="tech-progress"><div class="progress-bar" style="width: 75%"></div></div>
+        </div>
+        <div class="tech-card">
+            <div class="tech-icon">🧡</div>
+            <span class="tech-name">Java</span>
+            <div class="tech-progress"><div class="progress-bar" style="width: 75%"></div></div>
+        </div>
+        <div class="tech-card">
+            <div class="tech-icon">🤖</div>
+            <span class="tech-name">Telegram Bots</span>
+            <div class="tech-progress"><div class="progress-bar" style="width: 85%"></div></div>
+        </div>
+        <div class="tech-card">
+            <div class="tech-icon">🕶🖥️</div>
+            <span class="tech-name">Cybersecurity</span>
+            <div class="tech-progress"><div class="progress-bar" style="width: 85%"></div></div>
+        </div>
+    </div>
+</section>
+
+<h2>📜 Мої сертифікати</h2>
+<div class="document-container">
+        <h3>🔑 Сертифікати Logika</h3>
+        <img src="{{ url_for('static', filename='Logika1.png') }}" class="thumb" onclick="openModal(this.src)">
+        <img src="{{ url_for('static', filename='Logika2.png') }}" class="thumb" onclick="openModal(this.src)">
+        <p>Сертифікати з завершення курсів мови програмування Python школи Logika</p>
+</div>
+
+<section class="it-section">
+    <h2 class="section-title"><span class="icon">💼</span> Що я пропоную</h2>
+    <div class="tech-grid">
+        <div class="tech-card">
+            <div class="tech-icon">🌐</div>
+            <h3 class="tech-name">Розробка сайтів</h3>
+            <p>Адаптивні веб-сайти з сучасним дизайном, швидким завантаженням і SEO-оптимізацією.</p>
+        </div>
+        <div class="tech-card">
+            <div class="tech-icon">🤖</div>
+            <h3 class="tech-name">Telegram-боти</h3>
+            <p>Створення ботів для автоматизації бізнесу, завантаження контенту, обробки замовлень.</p>
+        </div>
+        <div class="tech-card">
+            <div class="tech-icon">📊</div>
+            <h3 class="tech-name">Data-аналітика</h3>
+            <p>Збір, очищення і візуалізація даних, створення аналітичних звітів і прогнозів.</p>
+        </div>
+        <div class="tech-card">
+            <div class="tech-icon">🎮</div>
+            <h3 class="tech-name">Розробка ігор</h3>
+            <p>2D/3D ігри на Python або Java, інтерактивні проєкти з анімацією та звуком.</p>
+        </div>
+        <div class="tech-card">
+            <div class="tech-icon">🖥️</div>
+            <h3 class="tech-name">Десктопні програми</h3>
+            <p>Віконні додатки для Windows/Mac/Linux з зручним інтерфейсом (PyQt, Tkinter, JavaFX).</p>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials">
+    <h2 class="section-title">⭐ Відгуки клієнтів</h2>
+    <div class="testimonial">
+        <blockquote>“Карина розробила сайт та налаштувала бота для нашого магазину — все працює швидко та без помилок.”</blockquote>
+        <cite>— Іван, власник магазину</cite>
+    </div>
+    <div class="testimonial">
+        <blockquote>“Замовила гру на Python для навчання дітей – вийшло цікаво, яскраво і зручно!”</blockquote>
+        <cite>— Олена, вчителька</cite>
+    </div>
+</section>
+
+<div class="cta">
+    <a href="https://t.me/karynasorokina" class="cta-btn">📩 Замовити проєкт</a>
+</div>
+
+<h2>🚀 Мої проєкти</h2>
+<div class="projects-list">
+    <article class="project">
+        <h3>Telegram бот для завантаження музики</h3>
+        <p>Python-бот, який допомагає швидко завантажувати та конвертувати аудіо з YouTube у потрібний формат.</p>
+        <a href="https://t.me/MusicCrossplatformBot" target="_blank" rel="noopener noreferrer">Спробувати у Telegram</a>
+    </article>
+    <article class="project">
+        <h3>Фото-редактор</h3>
+        <p>Програма для редагування зображень з можливістю фільтрів і корекції.</p>
+        <a href="https://github.com/karynasorokina/DataAnalyticsJob" target="_blank" rel="noopener noreferrer">Дивитись на GitHub</a>
+    </article>
+    <article class="project">
+        <h3>Дата-аналітика</h3>
+        <p>Аналітика та аналіз гіпотез з даних по професії Data-Analytics.</p>
+        <a href="https://github.com/karynasorokina/DataAnalyticsJob" target="_blank" rel="noopener noreferrer">Дивитись на GitHub</a>
+    </article>
+    <article class="project">
+        <h3>Сайт-портфоліо</h3>
+        <p>Адаптивний сайт для презентації моїх навичок і проєктів.</p>
+        <a href="https://твій_сайт_демо" target="_blank" rel="noopener noreferrer">Перейти на сайт</a>
+    </article>
+</div>
+
+<footer>
+    &copy; 2025 Карина Сорокіна. Всі права захищені.<br>
+    Instagram, Telegram, Github: karynasorokina
+</footer>

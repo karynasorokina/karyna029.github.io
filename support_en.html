@@ -1,0 +1,103 @@
+{% include "base_en.html" %}
+<main class="donate-page">
+  <section class="donate-header">
+    <h1>❤️ Support Project Development</h1>
+    <p>Your support helps me create new useful content, improve the website, and do more for the IT community.</p>
+  </section>
+
+  <section class="donate-progress">
+    <div class="progress-text">Collected <span id="current-amount">2</span>$ out of <span id="goal-amount">100</span>$</div>
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 0;"></div>
+    </div>
+  </section>
+
+  <section class="donate-options">
+    <div class="donate-card">
+      <span class="icon">☕</span>
+      <h3>Support for a Coffee</h3>
+      <p>A small but important help</p>
+      <button onclick="donate(5)">5$</button>
+    </div>
+    <div class="donate-card">
+      <span class="icon">💖</span>
+      <h3>My Hero</h3>
+      <p>You make development faster</p>
+      <button onclick="donate(10)">10$</button>
+    </div>
+    <div class="donate-card">
+      <span class="icon">🚀</span>
+      <h3>Super Sponsor</h3>
+      <p>You help move forward with big steps</p>
+      <button onclick="donate(25)">25$</button>
+    </div>
+  </section>
+
+  <section class="custom-amount">
+    <h3>💌 Other Amount</h3>
+    <input type="number" id="custom-donate" placeholder="Enter amount $" />
+    <button id="custom-button">Support</button>
+  </section>
+
+  <section class="payment-methods">
+    <h3>Ways to Support</h3>
+    <div class="methods">
+      <a href="https://send.monobank.ua/jar/2g4tYv4pL8" target="_blank">💳 Monobank</a>
+      <a href="#">Buy Me a Coffee</a>
+    </div>
+  </section>
+
+  <section class="non-financial-support">
+    <h3>🤝 Other Ways to Help</h3>
+    <ul>
+      <li>🔄 <strong>Share</strong> my website or articles on social media</li>
+      <li>📝 <strong>Write a review</strong> or recommend me to friends</li>
+      <li>📢 <strong>Place ads</strong> for my services or projects</li>
+      <li>💬 <strong>Leave comments</strong> or ideas for new materials</li>
+    </ul>
+  </section>
+
+  <section class="transparency">
+    <p><b>💡 Every donation goes to paying for hosting, developing new features, and creating educational materials.</b></p>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Karyna Sorokina. All rights reserved.
+  <br>
+  Instagram, Telegram, Github: karynasorokina
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentAmountEl = document.getElementById("current-amount");
+    const goalAmountEl = document.getElementById("goal-amount");
+    const progressFill = document.querySelector(".progress-fill");
+    let currentAmount = parseInt(currentAmountEl.textContent);
+    const goalAmount = parseInt(goalAmountEl.textContent);
+
+    function updateProgress() {
+      let percentage = Math.min((currentAmount / goalAmount) * 100, 100);
+      progressFill.style.width = percentage + "%";
+    }
+
+    document.querySelectorAll(".donate-card button").forEach(btn => {
+      btn.addEventListener("click", () => {
+        currentAmount += parseInt(btn.dataset.amount);
+        currentAmountEl.textContent = currentAmount;
+        updateProgress();
+      });
+    });
+
+    document.getElementById("custom-button").addEventListener("click", () => {
+      let custom = parseInt(document.getElementById("custom-donate").value);
+      if (!isNaN(custom) && custom > 0) {
+        currentAmount += custom;
+        currentAmountEl.textContent = currentAmount;
+        updateProgress();
+      }
+    });
+
+    // Initial animation
+    setTimeout(updateProgress, 300);
+  });
+</script>

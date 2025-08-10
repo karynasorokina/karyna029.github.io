@@ -1,0 +1,211 @@
+{% include "base.html" %}
+<section class="mentor-hero">
+  <div class="hero-content">
+    <h1><span class="hero-highlight">Навчайся легко</span> та з задоволенням! <i class="fas fa-rocket"></i></h1>
+    <p class="hero-text">Я – Карина, твій особистий ментор, який допоможе подолати складні теми, відчути впевненість у навчанні та досягти кращих результатів без стресу і нудних уроків.</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-number" data-count="50">0</div>
+        <div class="stat-label">учнів</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="95">0</div>
+        <div class="stat-label">% успішності</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="100">0</div>
+        <div class="stat-label">задоволених</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div class="image-container">
+      <img src="{{ url_for('static', filename='mentor.jpg') }}" alt="Карина Сорокіна" width="200" height="270" class="main-photo">
+    </div>
+  </div>
+</section>
+
+<section class="benefits">
+  <h2 style="text-align: center">Чому варто обрати мене?</h2>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="fas fa-graduation-cap"></i></div>
+      <div class="tech-icon">️😉</div>
+      <h3>Легке пояснення складних тем</h3>
+      <p>Розбираємо матеріал крок за кроком, доки він не стане зрозумілим.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="fas fa-fire"></i></div>
+      <div class="tech-icon">️👍🏼</div>
+      <h3>Мотивація та підтримка</h3>
+      <p>Допомагаю розкрити потенціал і зарядитися натхненням.
+        Підтримую на шляху до успіху і самовдосконалення.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="fas fa-user-tie"></i></div>
+      <div class="tech-icon">️🫡</div>
+      <h3>Індивідуальний підхід</h3>
+      <p>Програма навчання адаптується під ваші потреби та темп.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="fas fa-lightbulb"></i></div>
+      <div class="tech-icon">️❤️‍🔥</div>
+      <h3>Лайфхаки навчання</h3>
+      <p>Навчаю ефективним технікам запам'ятовування та аналізу.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="fas fa-tachometer-alt"></i></div>
+      <div class="tech-icon">️📈</div>
+      <h3>Швидкий прогрес</h3>
+      <p>Перші результати вже після кількох занять.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="fas fa-heart"></i></div>
+      <div class="tech-icon">️🤝</div>
+      <h3>Дружня атмосфера</h3>
+      <p>Заняття проходять у комфортній та підтримуючій атмосфері.</p>
+    </div>
+  </div>
+</section>
+
+<section class="subjects-section">
+  <h2 style="text-align: center">📚 Предмети, які я викладаю</h2>
+  <div class="subjects-container">
+    <div class="subject-card math-card">
+      <div class="subject-content">
+        <h3 style="color: white">Математика</h3>
+        <ul>
+          <li>Шкільна програма</li>
+          <li>Підготовка до вступу в середню школу (přijímací zkouška)</li>
+          <li>Розвиток логічного мислення</li>
+          <li>Участь в олімпіадах і конкурсах</li>
+        </ul>
+        <div class="subject-icon"><i class="fas fa-square-root-alt"></i></div>
+      </div>
+    </div>
+    <div class="subject-card english-card">
+      <div class="subject-content">
+        <h3 style="color: white">Англійська мова</h3>
+        <ul>
+          <li>Рівень A0–B1</li>
+          <li>Розширення словникового запасу</li>
+          <li>Впевнене спілкування та структуроване висловлення думок</li>
+          <li>Регулярна практика через англійський медіа-простір</li>
+          <li>Робота над навичками аудіювання та письма</li>
+        </ul>
+        <div class="subject-icon"><i class="fas fa-language"></i></div>
+      </div>
+    </div>
+    <div class="subject-card czech-card">
+      <div class="subject-content">
+        <h3 style="color: white">Чеська мова</h3>
+        <ul>
+          <li>Рівень A0–B1</li>
+          <li>Підготовка до вступу</li>
+          <li>Розмовна практика</li>
+          <li>Академічна мова, поглиблене вивчення</li>
+        </ul>
+        <div class="subject-icon"><i class="fas fa-language"></i></div>
+      </div>
+    </div>
+    <div class="subject-card lang-card">
+      <div class="subject-content">
+        <h3 style="color: white">Українська мова</h3>
+        <ul>
+          <li>Граматика</li>
+          <li>Написання творів</li>
+          <li>Література</li>
+          <li>Підготовка до ЗНО</li>
+        </ul>
+        <div class="subject-icon"><i class="fas fa-pen-fancy"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <h2 style="text-align: center">Відгуки моїх учнів</h2>
+  <div class="testimonials-slider">
+    <div class="testimonial-card">
+      <div class="testimonial-content">
+        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+        <p>Карина дуже зрозуміло пояснює складні теми. Завдяки їй я нарешті зрозумів математику і склав ЗНО на 190 балів!</p>
+        <div class="student-info">
+          <div class="student-name">Андрій, 17 років</div>
+          <div class="student-rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-content">
+        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+        <p>Після кожного заняття я залишаюсь у повному захваті!
+         З самого початку викладач створив дружню атмосферу, ознайомив з алфавітом, вимовою та базовими фразами.
+         Кожен урок унікальний та різноманітний: багато практики, ігор, інтерактиву, повторення для кращого засвоєння матеріалу, ми слухали приклади та створювали діалоги.</p>
+        <div class="student-info">
+          <div class="student-name">Іванна, 25 років</div>
+          <div class="student-rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="testimonials-slider">
+    <div class="testimonial-card">
+      <div class="testimonial-content">
+        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+        <p>Мені дуже подобаються заняття з чеської мови! Вони проходять у цікавому та зручному форматі — ми поєднуємо граматику, нову лексику, читання та практику говоріння.
+        Навчання виходить різноманітним і динамічним.
+        Атмосфера на уроках доброзичлива й мотивуюча — хочеться вчитися далі!
+        Особливо мені подобається тренувати вимову й говоріння — це дає впевненість у реальному спілкуванні.
+        Загалом, я дуже задоволений заняттями, бачу прогрес і з кожним уроком почуваюся більш впевнено.</p>
+        <div class="student-info">
+          <div class="student-name">Віталій, 13 років</div>
+          <div class="student-rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-container">
+    <h2 style="color: white">Готовий(а) навчатися по-новому?</h2>
+    <p>Заповніть форму і я зв'яжусь з вами для безкоштовної консультації</p>
+    <a href="{{ url_for('contact') }}" class="cta-button">
+      Записатись на урок <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+
+<script>
+function animateValue(obj, start, end, duration) {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    obj.innerHTML = Math.floor(progress * (end - start) + start);
+    if (progress < 1) window.requestAnimationFrame(step);
+  };
+  window.requestAnimationFrame(step);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const statNumbers = document.querySelectorAll('.stat-number');
+  statNumbers.forEach(number => {
+    const target = parseInt(number.getAttribute('data-count'));
+    animateValue(number, 0, target, 2000);
+  });
+});
+</script>
+
+<footer>
+  &copy; 2025 Карина Сорокіна. Всі права захищені.
+  <br>
+  Instagram, Telegram, Github: karynasorokina
+</footer>

@@ -1,0 +1,81 @@
+{% include "base_en.html" %}
+<main>
+    <div class="photo-container">
+        <img src="{{ url_for('static', filename='Sorokina-Karyna.jpg') }}"
+             alt="Photo of Karyna"
+             width="300" height="370"
+             class="main-photo" />
+    </div>
+
+    <section class="facts">
+        <div class="card">
+            <img src="{{ url_for('static', filename='my-life.jpg') }}" alt="icon" class="card-icon" />
+            <h3>About Me</h3>
+            <p>At 16, I already combine studying, programming, and mentoring. Living in the Czech Republic, I help students from Ukraine and Europe step confidently into the world of technology.</p>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='Vysvedceni.jpg') }}" alt="icon" class="card-icon" />
+            <h3>Education</h3>
+            <p>3 years of professional programming (Logika), currently studying Information Technologies. Hackathon victories, certificates, and project defenses.</p>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='Guitar.jpg') }}" alt="icon" class="card-icon" />
+            <h3>Hobbies</h3>
+            <p>I create music and beats, play musical instruments, do photo and video editing, and produce modern content.</p>
+        </div>
+    </section>
+
+    <section class="skills-section">
+        <h2>My Skills</h2>
+        <div class="facts">
+            <div class="card">
+                <h3>Beginner</h3>
+                <ul class="card-list">
+                    <li>Java Developer</li>
+                    <li>High-load application logic</li>
+                    <li>Data analytics</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Intermediate</h3>
+                <ul class="card-list">
+                    <li>Basics of cybersecurity</li>
+                    <li>Databases (SQLite)</li>
+                    <li>English and Czech languages</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Advanced</h3>
+                <ul class="card-list">
+                    <li>Python: Back-end & Front-end</li>
+                    <li>Practical projects</li>
+                    <li>Attention to detail and responsibility</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="achievements">
+        <h2>My Achievements</h2>
+        <div class="slider-wrapper">
+            <div class="slider" id="achievementSlider">
+                <div class="card">🏆 Logika Certificate 1–3</div>
+                <div class="card">🏅 Participation in Olympiads</div>
+                <div class="card">🏅 Project and research defenses</div>
+                <div class="card">🎓 Hackathon winner</div>
+                <div class="card">👩‍🎓 Admission to a state secondary school in the Czech Republic</div>
+                <div class="card">📈 20+ students with proven results</div>
+                <div class="card">💼 Real projects on GitHub</div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    &copy; 2025 Karyna Sorokina. All rights reserved.
+    <br>
+    Instagram, Telegram, GitHub: karynasorokina
+</footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сорокіна Карина</title>
+
+    <!-- Шрифти -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Іконка -->
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+
+    <!-- Стилі -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1 style="color: white"><span class="icon">👩‍💻</span>Карина Сорокіна</h1>
+    <h2 class="creative-subtitle">Розробник / Студентка / Ментор</h2>
+</header>
+
+<nav>
+  <ul class="menu">
+    <li><a href="{{ url_for('index') }}">Головна</a></li>
+    <li class="dropdown">
+      <a href="#" onclick="return false;">Спеціалізація</a>
+      <ul class="dropdown-content">
+        <li><a href="{{ url_for('achievements') }}">Освіта, досягнення</a></li>
+        <li><a href="{{ url_for('speciality_IT') }}">IT</a></li>
+        <li><a href="{{ url_for('speciality_mentor') }}">Менторство</a></li>
+      </ul>
+    </li>
+    <li><a href="{{ url_for('advice') }}">Поради</a></li>
+    <li><a href="{{ url_for('support') }}">Підтримка</a></li>
+    <li><a href="{{ url_for('contact') }}">Контакти</a></li>
+    <li class="dropdown">
+        <a href="#" onclick="return false;">Мова 🇺🇦</a>
+        <ul class="dropdown-content">
+            <li><a href="{{ url_for('index') }}">Українська 🇺🇦</a></li>
+            <li><a href="{{ url_for('index_en') }}">English 🇬🇧</a></li>
+            <li><a href="{{ url_for('index_cz') }}">Čeština 🇨🇿</a></li>
+        </ul>
+    </li>
+  </ul>
+</nav>
+
+<script>
+  const elements = document.querySelectorAll('.scroll-animate');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
