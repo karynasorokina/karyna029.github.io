@@ -18,7 +18,7 @@ def send_to_telegram(message):
     data = {"chat_id": CHAT_ID, "text": message}
     requests.post(url, data=data)
 
-@app.route('/contact', methods=['GET', 'POST'])
+@app.route('/contact', methods=['GET', 'POST', 'HEAD'])
 def contact():
     if request.method == "POST":
         subject = request.form.get('subject')
@@ -137,4 +137,5 @@ if __name__ == "__main__":
     # Запускаємо веб-сервер:
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=False)
+
 
