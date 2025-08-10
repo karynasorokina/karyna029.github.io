@@ -1,0 +1,19 @@
+
+    body {font-family: 'Montserrat', sans-serif; margin: 0; color: #333; background: #f8f9fa;}
+    header {background: linear-gradient(135deg, #ff8a65, #ff7043); color: white; padding: 20px; text-align: center;}
+    nav ul {list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px;}
+    nav a {color: white; text-decoration: none; font-weight: 600; transition: color .3s;}
+    nav a:hover {color: #ffe0b2;}
+    .hero {text-align: center; padding: 60px 20px; background: white;}
+    .hero h1 {font-size: 2.5rem; color: #ff7043;}
+    .hero p {max-width: 700px; margin: 20px auto; font-size: 1.2rem;}
+    .cards {display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 40px;}
+    .card {background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; font-weight: 600;}
+    .subjects {background: #fff3e0; padding: 40px; text-align: center;}
+    .subjects h2 {color: #ef6c00;}
+    .subjects ul {display: flex; justify-content: center; gap: 20px; list-style: none; padding: 0; font-weight: 600;}
+    .cta {text-align: center; padding: 50px 20px; background: linear-gradient(135deg, #ff7043, #ff5722); color: white;}
+    .cta h2 {font-size: 2rem; margin-bottom: 20px;}
+    .cta a {background: white; color: #ff5722; padding: 12px 24px; border-radius: 30px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.15); transition: background .3s, color .3s;}
+    .cta a:hover {background: #ffe0b2; color: #e65100;}
+    footer {text-align: center; padding: 20px; background: #212121; color: #ccc;}
